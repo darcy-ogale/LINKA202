@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LINKA — Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ui.css?v=3">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
+    </div>
+
+    <main class="login-page">
+
+        <!-- Branding Section -->
+        <section class="brand-section">
+
+            <div class="brand-logo">
+                <img class="brand-logo-image" src="logo.png" alt="LINKA">
+            </div>
+
+            <div class="brand-text">
+                <h1>Stay Close. Stay Connected.</h1>
+                <p>
+                    Connect with the people who matter,
+                    share your moments, and build meaningful
+                    connections.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Login Card -->
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <div class="login-header">
+                    <h2>Welcome back</h2>
+                    <p>Log in to continue to LINKA</p>
+                </div>
+
+
+                <form id="loginForm">
+
+                    <!-- Email -->
+                    <div class="input-group">
+
+                        <label for="email">Email address</label>
+
+                        <div class="input-wrapper">
+
+                            <svg
+                                class="input-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M4 6H20C21.1 6 22 6.9 22 8V16C22 17.1 21.1 18 20 18H4C2.9 18 2 17.1 2 16V8C2 6.9 2.9 6 4 6Z"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                />
+                                <path
+                                    d="M22 8L12 13L2 8"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                />
+                            </svg>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="input-group">
+
+                        <div class="password-label">
+                            <label for="password">Password</label>
+
+                            <a href="#" class="forgot-password">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <svg
+                                class="input-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect
+                                    x="4"
+                                    y="10"
+                                    width="16"
+                                    height="11"
+                                    rx="2"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                />
+                                <path
+                                    d="M8 10V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V10"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                />
+                            </svg>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                                aria-label="Show password"
+                            >
+                                <svg
+                                    id="eyeIcon"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M3 3L21 21"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    />
+                                    <path
+                                        d="M10.58 10.59 A2 2 0 0 0 13.41 13.42"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    />
+                                    <path
+                                        d="M9.88 5.09 C10.56 4.89 11.27 4.8 12 4.8 C18.5 4.8 22 12 22 12 C21.34 13.35 20.4 14.58 19.25 15.6"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    />
+                                    <path
+                                        d="M6.61 6.61 C3.78 8.35 2 12 2 12 C2 12 5.5 19.2 12 19.2 C13.44 19.2 14.78 18.9 15.99 18.38"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    />
+                                </svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Remember -->
+                    <div class="form-options">
+
+                        <label class="remember">
+
+                            <input type="checkbox" id="remember">
+
+                            <span class="custom-checkbox"></span>
+
+                            <span>Remember me</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+
+                        <span class="button-text">Log in</span>
+
+                        <span class="loader"></span>
+
+                    </button>
+
+                    <div
+                        class="message"
+                        id="message"
+                    ></div>
+
+                </form>
+
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span></span>
+                    <p>or continue with</p>
+                    <span></span>
+                </div>
+
+
+                <!-- Social Login -->
+                <div class="social-login">
+
+                    <button class="social-button" type="button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M21.35 12.23c0-.79-.07-1.55-.23-2.27H12v4.3h5.23a4.47 4.47 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.92-4.18 2.92-7.39Z"
+                                fill="#4285F4"
+                            />
+                            <path
+                                d="M12 21.5c2.63 0 4.84-.87 6.45-2.35l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.55 0-4.72-1.72-5.5-4.04H3.25v2.51A9.74 9.74 0 0 0 12 21.5Z"
+                                fill="#34A853"
+                            />
+                            <path
+                                d="M6.5 13.6a5.86 5.86 0 0 1 0-3.2V7.89H3.25a9.73 9.73 0 0 0 0 8.22L6.5 13.6Z"
+                                fill="#FBBC05"
+                            />
+                            <path
+                                d="M12 6.36c1.43 0 2.71.49 3.73 1.46l2.8-2.8C16.84 3.46 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.75 5.39L6.5 10.4C7.28 8.08 9.45 6.36 12 6.36Z"
+                                fill="#EA4335"
+                            />
+                        </svg>
+
+                        Google
+                    </button>
+
+
+                    <button class="social-button" type="button">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12C2 16.42 4.87 20.17 8.84 21.49C9.34 21.58 9.5 21.27 9.5 21C9.5 20.76 9.49 20.13 9.48 19.29C6.73 19.89 6.14 17.97 6.14 17.97C5.68 16.81 5.03 16.5 5.03 16.5C4.13 15.88 5.1 15.89 5.1 15.89C6.1 15.96 6.63 16.92 6.63 16.92C7.52 18.45 8.97 18 9.5 17.74C9.59 17.1 9.85 16.66 10.13 16.41C7.93 16.16 5.62 15.31 5.62 11.28C5.62 10.13 6.03 9.19 6.65 8.45C6.55 8.2 6.2 7.13 6.75 5.7C6.75 5.7 7.58 5.43 9.5 6.74C10.29 6.52 11.15 6.41 12 6.41C12.85 6.41 13.71 6.52 14.5 6.74C16.42 5.43 17.25 5.7 17.25 5.7C17.8 7.13 17.45 8.2 17.35 8.45C17.97 9.19 18.38 10.13 18.38 11.28C18.38 15.32 16.06 16.15 13.86 16.4C14.22 16.71 14.54 17.32 14.54 18.25C14.54 19.59 14.53 20.67 14.53 21C14.53 21.27 14.69 21.59 15.2 21.49C19.13 20.17 22 16.42 22 12C22 6.48 17.52 2 12 2Z"
+                            />
+                        </svg>
+
+                        GitHub
+
+                    </button>
+
+                </div>
+
+
+                <!-- Sign Up -->
+                <div class="signup">
+
+                    <span>Don't have an account?</span>
+
+                    <a href="#">
+                        Create account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Loading screen (shown while logging in) -->
+    <div class="loading-screen" id="loadingScreen" aria-live="polite" aria-hidden="true">
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
+
+        <div class="loading-content">
+
+            <div class="loading-logo">
+                <span class="loading-ring"></span>
+                <span class="loading-pulse"></span>
+                <img src="logo.png" alt="LINKA">
+            </div>
+
+            <div class="loading-bar"><span></span></div>
+
+            <p class="loading-text" id="loadingText">Logging you in...</p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+  <script src="ui.js?v=3"></script>
+</body>
+</html>

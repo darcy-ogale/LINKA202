@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile • LINKA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="profile.css?v=3">
+  <link rel="stylesheet" href="ui.css?v=3">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <button class="mobile-back" data-href="home.html" aria-label="Back to home">
+            <svg viewBox="0 0 24 24">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+
+        <a class="brand" href="home.html" aria-label="LINKA home">
+            <img src="homelogo.png" alt="LINKA home logo" class="brand-icon">
+            <img src="homename.png" alt="LINKA" class="brand-wordmark">
+        </a>
+
+
+        <div class="top-search">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M21 21l-4.35-4.35"/>
+                <circle cx="11" cy="11" r="6.5"/>
+            </svg>
+
+            <input
+                type="text"
+                placeholder="Search"
+                id="globalSearch"
+            >
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <button
+                class="icon-btn"
+                id="notificationBtn"
+                aria-label="Notifications"
+            >
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                    <path d="M10 21h4"/>
+                </svg>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+            <button
+                class="icon-btn"
+                data-href="messages.html"
+                aria-label="Messages"
+            >
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4.2-.9L3 21l1.8-4.4A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/>
+                </svg>
+
+            </button>
+
+
+            <button class="profile-mini" id="topbarAvatar">
+
+                <div class="avatar avatar-blue" id="meAvatarSmall">
+                    D
+                </div>
+
+                <span id="meNameSmall">Darcy</span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         PROFILE PAGE
+    ====================================================== -->
+
+    <main class="profile-page">
+
+        <!-- =================================================
+             PROFILE HERO
+        ================================================== -->
+
+        <section class="profile-hero">
+
+            <div class="cover-photo">
+
+                <div class="cover-pattern"></div>
+
+                <button
+                    class="edit-cover"
+                    id="editCoverBtn"
+                >
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 20h9"/>
+                        <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/>
+                    </svg>
+
+                    Edit cover
+
+                </button>
+
+            </div>
+
+
+            <div class="profile-main">
+
+                <div class="profile-avatar-wrapper">
+
+                    <div class="profile-avatar" id="heroAvatar">
+                        D
+                    </div>
+
+                    <button
+                        class="avatar-edit"
+                        id="avatarEditBtn"
+                        aria-label="Change profile photo"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+
+                    </button>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <div class="profile-name-row">
+
+                        <div>
+
+                            <h1>
+                                Darcy Og
+                                <span class="verified" data-tooltip="Verified"><img src="badge/Verified.png" alt="Verified badge"></span>
+                                <span class="verified" data-tooltip="Founder"><img src="badge/Fbadge.png" alt="Founder badge"></span>
+                                <span class="verified" data-tooltip="Alpha Tester"><img src="badge/badge.png" alt="Alpha Tester badge"></span>
+                            </h1>
+
+                            <p class="username">
+                                @darcyog
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="bio">
+                        لا شيء مستحيل إذا أقنعت عقلك فقط
+                    </p>
+
+
+                    <div class="profile-meta">
+
+                        <span>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="2.5"/>
+                            </svg>
+                            Philippines
+                        </span>
+
+
+                        <span>
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                            Joined 2026
+                        </span>
+
+
+                        <span>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 4h16v16H4z"/>
+                                <path d="M8 8h8M8 12h6"/>
+                            </svg>
+                            2 posts
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-actions">
+
+                    <button
+                        class="primary-btn"
+                        id="editProfileBtn"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/>
+                        </svg>
+
+                        Edit profile
+
+                    </button>
+
+
+                    <button
+                        class="more-btn"
+                        id="moreBtn"
+                    >
+                        •••
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE NAVIGATION -->
+
+            <nav class="profile-tabs">
+
+                <button
+                    class="profile-tab active"
+                    data-tab="posts"
+                >
+                    Posts
+                </button>
+
+                <button
+                    class="profile-tab"
+                    data-tab="media"
+                >
+                    Media
+                </button>
+
+                <button
+                    class="profile-tab"
+                    data-tab="likes"
+                >
+                    Likes
+                </button>
+
+                <button
+                    class="profile-tab"
+                    data-tab="saved"
+                >
+                    Saved
+                </button>
+
+            </nav>
+
+        </section>
+
+
+        <!-- =================================================
+             PROFILE CONTENT
+        ================================================== -->
+
+        <section class="profile-content">
+
+            <!-- LEFT COLUMN -->
+
+            <aside class="profile-sidebar">
+
+                <!-- INTRO -->
+
+                <div class="profile-card">
+
+                    <div class="card-title-row">
+
+                        <h2>
+                            About me
+                        </h2>
+
+                        <button class="small-edit">
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="about-list">
+
+                        <div class="about-item">
+
+                            <div class="about-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 4h16v16H4z"/>
+                                    <path d="M8 8h8"/>
+                                    <path d="M8 12h6"/>
+                                    <path d="M8 16h4"/>
+                                </svg>
+                            </div>
+
+                            <span>
+                                Digital creator
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <div class="about-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path d="M3 12h18"/>
+                                    <path d="M12 3a14 14 0 0 1 0 18"/>
+                                    <path d="M12 3a14 14 0 0 0 0 18"/>
+                                </svg>
+                            </div>
+
+                            <span>
+                                linka.social/darcyog
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <div class="about-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                    <circle cx="12" cy="10" r="2.5"/>
+                                </svg>
+                            </div>
+
+                            <span>
+                                Philippines
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FRIENDS -->
+
+                <div class="profile-card">
+
+                    <div class="card-title-row">
+
+                        <div>
+                            <h2>Friends</h2>
+                            <span>6 friends</span>
+                        </div>
+
+                        <button class="see-all">
+                            See all
+                        </button>
+
+                    </div>
+
+
+                    <div class="friends-grid">
+
+                        <div class="friend">
+                            <div class="friend-avatar avatar-pink" data-user="sofia">
+                                S
+                            </div>
+                            <strong>Sophia</strong>
+                        </div>
+
+                        <div class="friend">
+                            <div class="friend-avatar avatar-purple" data-user="jessica">
+                                J
+                            </div>
+                            <strong>Jessica</strong>
+                        </div>
+
+                        <div class="friend">
+                            <div class="friend-avatar avatar-green" data-user="mark">
+                                M
+                            </div>
+                            <strong>Mark</strong>
+                        </div>
+
+                        <div class="friend">
+                            <div class="friend-avatar avatar-orange" data-user="alex">
+                                A
+                            </div>
+                            <strong>Alex</strong>
+                        </div>
+
+                        <div class="friend">
+                            <div class="friend-avatar avatar-cyan" data-user="ryan">
+                                R
+                            </div>
+                            <strong>Ryan</strong>
+                        </div>
+
+                        <div class="friend">
+                            <div class="friend-avatar avatar-red" data-user="john">
+                                J
+                            </div>
+                            <strong>John</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTOS -->
+
+                <div class="profile-card">
+
+                    <div class="card-title-row">
+
+                        <h2>
+                            Photos
+                        </h2>
+
+                        <button class="see-all">
+                            See all
+                        </button>
+
+                    </div>
+
+
+                    <div class="photo-grid">
+
+                        <div class="photo photo-one"><img src="Photos/p1.jpg" alt="Basketball on the pavement" loading="lazy"></div>
+                        <div class="photo photo-two"><img src="Photos/p2.jpg" alt="Sunflower field" loading="lazy"></div>
+                        <div class="photo photo-three"><img src="Photos/p3.jpg" alt="Code editor at night" loading="lazy"></div>
+                        <div class="photo photo-four"><img src="Photos/p4.jpg" alt="Walking in the snow" loading="lazy"></div>
+                        <div class="photo photo-five"><img src="Photos/p5.jpg" alt="Funny cat sticker" loading="lazy"></div>
+                        <div class="photo photo-six"><img src="Photos/p6.jpg" alt="Skateboard and basketball" loading="lazy"></div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- CENTER FEED -->
+
+            <div class="profile-feed">
+
+                <!-- CREATE POST -->
+
+                <div class="create-post">
+
+                    <div class="create-top">
+
+                        <div class="avatar avatar-blue" id="createAvatar">
+                            D
+                        </div>
+
+                        <button
+                            class="post-input"
+                            id="createPostBtn"
+                        >
+                            What's on your mind, Darcy?
+                        </button>
+
+                    </div>
+
+
+                    <div class="create-actions">
+
+                        <button>
+                            <span class="action-icon photo-icon">
+                                ▣
+                            </span>
+                            Photo
+                        </button>
+
+                        <button>
+                            <span class="action-icon video-icon">
+                                ▶
+                            </span>
+                            Video
+                        </button>
+
+                        <button>
+                            <span class="action-icon feeling-icon">
+                                ☺
+                            </span>
+                            Feeling
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- POST 1 -->
+
+                <article class="post-card">
+
+                    <div class="post-header">
+
+                        <div class="post-user">
+
+                            <div class="avatar avatar-blue post-author-avatar">
+                                D
+                            </div>
+
+                            <div>
+                                <strong>Darcy Og</strong>
+
+                                <div class="post-time">
+                                    2h · 🌎
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <button class="post-more">
+                            •••
+                        </button>
+
+                    </div>
+
+
+                    <p class="post-text">
+                        ❤️❤️
+                    </p>
+
+
+                    <div class="post-image post-image-one">
+
+                        <img src="Photos/dopost.jpg" alt="Darcy's post photo">
+
+                    </div>
+
+
+                    <div class="post-stats">
+
+                        <span>
+                            <span class="reaction-icons">♥</span>
+                            <span class="like-count">128</span>
+                        </span>
+
+                        <span>
+                            24 comments · 8 shares
+                        </span>
+
+                    </div>
+
+
+                    <div class="post-actions">
+
+                        <button class="like-btn">
+                            <span>♡</span> Like
+                        </button>
+
+                        <button>
+                            <span>○</span> Comment
+                        </button>
+
+                        <button>
+                            <span>↗</span> Share
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POST 2 -->
+
+                <article class="post-card">
+
+                    <div class="post-header">
+
+                        <div class="post-user">
+
+                            <div class="avatar avatar-blue post-author-avatar">
+                                D
+                            </div>
+
+                            <div>
+                                <strong>Darcy Og</strong>
+
+                                <div class="post-time">
+                                    Yesterday · 🌎
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <button class="post-more">
+                            •••
+                        </button>
+
+                    </div>
+
+
+                    <p class="post-text">
+                        Small progress is still progress.
+                        Keep building. 💙
+                    </p>
+
+
+                    <div class="quote-card">
+
+                        <div class="quote-mark">
+                            “
+                        </div>
+
+                        <p>
+                            Great things are built one
+                            step at a time.
+                        </p>
+
+                    </div>
+
+
+                    <div class="post-stats">
+
+                        <span>
+                            <span class="reaction-icon">♥</span>
+                            76
+                        </span>
+
+                        <span>
+                            12 comments
+                        </span>
+
+                    </div>
+
+
+                    <div class="post-stats">
+                        <span>
+                            <span class="reaction-icons">♥</span>
+                            <span class="like-count">0</span>
+                        </span>
+                    </div>
+
+                    <div class="post-actions">
+
+                        <button class="like-btn">
+                            <span>♡</span> Like
+                        </button>
+
+                        <button>
+                            <span>○</span> Comment
+                        </button>
+
+                        <button>
+                            <span>↗</span> Share
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         EDIT PROFILE MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="editModal"
+    >
+
+        <div class="edit-modal">
+
+            <div class="modal-header">
+
+                <h2>
+                    Edit profile
+                </h2>
+
+                <button
+                    class="close-modal"
+                    id="closeModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="edit-form">
+
+                <label>
+                    Display name
+
+                    <input
+                        type="text"
+                        id="nameInput"
+                        value="Darcy Og"
+                    >
+
+                </label>
+
+
+                <label>
+                    Username
+
+                    <input
+                        type="text"
+                        id="usernameInput"
+                        value="@darcyog"
+                    >
+
+                </label>
+
+
+                <label>
+                    Bio
+
+                    <textarea id="bioInput">لا شيء مستحيل إذا أقنعت عقلك فقط</textarea>
+
+                </label>
+
+
+                <button
+                    class="save-profile"
+                    id="saveProfileBtn"
+                >
+                    Save changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION (same icons as Home / Messages)
+    ====================================================== -->
+
+    <nav class="mobile-nav">
+
+        <a class="mobile-nav-item" href="home.html">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M3 11.5L12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+            </svg>
+
+            <span>Home</span>
+
+        </a>
+
+
+        <a class="mobile-nav-item" href="home.html">
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="M20 20l-4-4"/>
+            </svg>
+
+            <span>Explore</span>
+
+        </a>
+
+
+        <a class="mobile-create" href="home.html#create" aria-label="Create">
+
+            <span>+</span>
+
+        </a>
+
+
+        <a class="mobile-nav-item" href="messages.html">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4.2-.9L3 21l1.8-4.4A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/>
+            </svg>
+
+            <span>Chat</span>
+
+        </a>
+
+
+        <a class="mobile-nav-item active" href="profile.html">
+
+            <div class="mobile-avatar">
+                <img src="Profile/darcy.jpg" alt="Darcy">
+            </div>
+
+            <span>Profile</span>
+
+        </a>
+
+    </nav>
+
+</div>
+
+
+<script src="linka-data.js"></script>
+<script src="profile.js?v=3"></script>
+
+  <script src="ui.js?v=3"></script><script src="connect.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LINKA — Connect. Share. Belong.</title>
+
+    <link rel="stylesheet" href="home.css?v=3">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ui.css?v=3">
+  <link rel="stylesheet" href="polish.css?v=1">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP NAVIGATION
+    ========================== -->
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <a href="#" class="brand">
+                <img src='homelogo.png' alt='LINKA home logo' class='brand-icon'>
+                <img src='homename.png' alt='LINKA' class='brand-wordmark'>
+
+            </a>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M21 21l-4.35-4.35M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4z"/>
+            </svg>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search"
+            >
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <a class="icon-button notification-button" id="notificationBtn" href="notifications.html" aria-label="Notifications">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
+                </svg>
+
+                <span class="notification-dot"></span>
+
+            </a>
+
+
+            <button class="icon-button" data-href="messages.html" aria-label="Messages">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4.2-.9L3 21l1.8-4.4A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/>
+                </svg>
+
+            </button>
+
+
+            <button class="profile-button" data-href="profile.html">
+
+                <div class="profile-avatar">
+                    <img src="Profile/darcy.jpg" alt="Darcy">
+                </div>
+
+                <span class="profile-name">Darcy</span>
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 9l6 6 6-6"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN LAYOUT
+    ========================== -->
+
+    <main class="page-layout">
+
+
+        <!-- =========================
+             LEFT SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar-left">
+
+            <div class="sidebar-profile" data-href="profile.html">
+
+                <div class="large-avatar">
+                    <img src="Profile/darcy.jpg" alt="Darcy">
+                </div>
+
+                <div>
+                    <strong>Darcy Og</strong>
+                    <small>@darcyog</small>
+                </div>
+
+            </div>
+
+
+            <nav class="main-navigation">
+
+                <a href="#" class="nav-item active">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 11.5L12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+                    </svg>
+
+                    <span>Home</span>
+
+                </a>
+
+
+                <a href="explore.html" class="nav-item">
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"/>
+                        <path d="M20 20l-4-4"/>
+                    </svg>
+
+                    <span>Explore</span>
+
+                </a>
+
+
+                <a href="connections.html" class="nav-item">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+
+                    <span>Connections</span>
+
+                </a>
+
+
+                <a href="messages.html" class="nav-item">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4.2-.9L3 21l1.8-4.4A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/>
+                    </svg>
+
+                    <span>Messages</span>
+
+                    <span class="nav-badge">0</span>
+
+                </a>
+
+
+                <a href="notifications.html" class="nav-item">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
+                    </svg>
+
+                    <span>Notifications</span>
+
+                    <span class="nav-badge notification-count">4</span>
+
+                </a>
+
+
+                <a href="saved.html" class="nav-item">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2l3.1 6.3L22 9.2l-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.1 2 9.2l6.9-.9L12 2z"/>
+                    </svg>
+
+                    <span>Saved</span>
+
+                </a>
+
+
+                <a href="settings.html" class="nav-item">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3l1.2 2.5 2.7.4-2 2 .5 2.8-2.4-1.3-2.4 1.3.5-2.8-2-2 2.7-.4L12 3z"/>
+                        <circle cx="12" cy="15" r="3"/>
+                        <path d="M19 15a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.3.9a7 7 0 0 0-2-1.2L14.3 6h-4.6l-.4 2.6a7 7 0 0 0-2 1.2L5 8.9l-2 3.4 2 1.5A7 7 0 0 0 5 15c0 .4 0 .8.1 1.2l-2 1.5 2 3.4 2.3-.9a7 7 0 0 0 2 1.2l.4 2.6h4.6l.4-2.6a7 7 0 0 0 2-1.2l2.3.9 2-3.4-2-1.5c.1-.4.1-.8.1-1.2z"/>
+                    </svg>
+
+                    <span>Settings</span>
+
+                </a>
+
+                <a href="create.html" class="nav-item">
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 8v8M8 12h8"/>
+                    </svg>
+
+                    <span>Create</span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-divider"></div>
+
+
+            <div class="sidebar-section-title">
+                YOUR SPACE
+            </div>
+
+
+            <a href="creative-hub.html" class="sidebar-link">
+                <span class="space-icon purple">🎨</span>
+                Creative Hub
+            </a>
+
+            <a href="gaming.html" class="sidebar-link">
+                <span class="space-icon orange"><svg viewBox="0 0 24 24"><path d="M7 8h10a5 5 0 0 1 4.5 7.2l-1.2 2.2a2.5 2.5 0 0 1-4.3.2L15 16H9l-1 1.6a2.5 2.5 0 0 1-4.3-.2l-1.2-2.2A5 5 0 0 1 7 8z"/><path d="M8 11v4M6 13h4M16 12h.01M18 14h.01"/></svg></span>
+                Gaming
+            </a>
+
+            <a href="music.html" class="sidebar-link">
+                <span class="space-icon green"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></span>
+                Music Lovers
+            </a>
+
+
+            <div class="sidebar-footer">
+                © 2026 LINKA
+            </div>
+
+        </aside>
+
+
+
+        <!-- =========================
+             FEED
+        ========================== -->
+
+        <section class="feed">
+
+
+            <!-- STORIES -->
+
+            <section class="stories-card">
+
+                <div class="stories-header">
+
+                    <h2>Stories</h2>
+
+                    <button>View all</button>
+
+                </div>
+
+
+                <div class="stories-container">
+
+
+                    <div class="story create-story">
+
+                        <div class="story-image">
+
+                            <div class="story-avatar">
+                                <img src="Profile/darcy.jpg" alt="Darcy">
+                            </div>
+
+                            <button class="add-story">+</button>
+
+                        </div>
+
+                        <span>Your story</span>
+
+                    </div>
+
+
+                    <div class="story">
+
+                        <div class="story-image story-one">
+                            <div class="story-ring">
+                                <img src="Profile/jessica.jpg" alt="Jessica">
+                            </div>
+                        </div>
+
+                        <span>Jessica</span>
+
+                    </div>
+
+
+                    <div class="story">
+
+                        <div class="story-image story-two">
+                            <div class="story-ring">
+                                <img src="Profile/mark.jpg" alt="Mark">
+                            </div>
+                        </div>
+
+                        <span>Mark</span>
+
+                    </div>
+
+
+                    <div class="story">
+
+                        <div class="story-image story-three">
+                            <div class="story-ring">
+                                <img src="Profile/alex.jpg" alt="Alex">
+                            </div>
+                        </div>
+
+                        <span>Alex</span>
+
+                    </div>
+
+
+                    <div class="story">
+
+                        <div class="story-image story-four">
+                            <div class="story-ring">
+                                <img src="Profile/sofia.jpg" alt="Sofia">
+                            </div>
+                        </div>
+
+                        <span>Sofia</span>
+
+                    </div>
+
+
+                    <div class="story">
+
+                        <div class="story-image story-five">
+                            <div class="story-ring">
+                                <img src="Profile/ryan.jpg" alt="Ryan">
+                            </div>
+                        </div>
+
+                        <span>Ryan</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CREATE POST -->
+
+            <section class="create-post card">
+
+                <div class="create-post-top">
+
+                    <div class="avatar small-avatar">
+                        <img src="Profile/darcy.jpg" alt="Darcy">
+                    </div>
+
+                    <button
+                        class="post-input"
+                        id="openPost"
+                        data-ui="post"
+                    >
+                        What's on your mind, Darcy?
+                    </button>
+
+                </div>
+
+
+                <div class="create-post-actions">
+
+                    <button class="post-action photo-action">
+
+                        <span>▣</span>
+                        Photo / Video
+
+                    </button>
+
+
+                    <button class="post-action">
+
+                        <span>☺</span>
+                        Feeling
+
+                    </button>
+
+
+                    <button class="post-action">
+
+                        <span>✦</span>
+                        Activity
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- POST 1 -->
+
+            <article class="post card">
+
+                <div class="post-header">
+
+                    <div class="post-user">
+
+                        <div class="avatar">
+
+                            <img src="Profile/jessica.jpg" alt="Jessica">
+
+                        </div>
+
+                        <div>
+
+                            <strong>Jessica Santos</strong>
+
+                            <div class="post-meta">
+                                @jessicas · 2h · 🌎
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="more-button">•••</button>
+
+                </div>
+
+
+                <div class="post-content">
+
+                    <p>
+                        Sometimes the best moments are the ones
+                        you didn't plan. ✨
+                    </p>
+
+                    <p>
+                        Just enjoying the sunset and being grateful
+                        for the people around me.
+                    </p>
+
+                </div>
+
+
+                <div class="post-image">
+
+                    <img src="jessicapost.jpg" alt="Jessica's sunset photo">
+
+                </div>
+
+
+                <div class="post-stats">
+
+                    <span>
+                        <span class="reaction-icons">♥</span>
+                        <span class="like-count">5</span>
+                    </span>
+
+                    <span>
+                        2 comments · 1 share
+                    </span>
+
+                </div>
+
+
+                <div class="post-actions">
+
+                    <button class="like-btn">
+
+                        <span>♡</span>
+                        Like
+
+                    </button>
+
+
+                    <button>
+
+                        <span>○</span>
+                        Comment
+
+                    </button>
+
+
+                    <button>
+
+                        <span>↗</span>
+                        Share
+
+                    </button>
+
+                </div>
+
+
+                <div class="comment-area">
+
+                    <div class="avatar mini-avatar">
+                        <img src="Profile/darcy.jpg" alt="Darcy">
+                    </div>
+
+                    <input
+                        type="text"
+                        placeholder="Write a comment..."
+                    >
+
+                </div>
+
+            </article>
+
+
+
+        </section>
+
+
+
+        <!-- =========================
+             RIGHT SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar-right">
+
+
+            <!-- PROFILE CARD -->
+
+            <div class="right-card profile-card">
+
+                <div class="cover"></div>
+
+                <div class="right-profile-avatar">
+                    <img src="Profile/darcy.jpg" alt="Darcy">
+                </div>
+
+                <div class="right-profile-info">
+
+                    <strong>Darcy Og</strong>
+
+                    <span>@darcyog</span>
+
+                </div>
+
+
+                <div class="profile-numbers">
+
+                    <div>
+                        <strong>6</strong>
+                        <span>Connections</span>
+                    </div>
+
+                    <div>
+                        <strong>6</strong>
+                        <span>Followers</span>
+                    </div>
+
+                </div>
+
+
+                <button class="view-profile" data-href="profile.html">
+                    View Profile
+                </button>
+
+            </div>
+
+
+
+            <!-- TRENDING -->
+
+            <div class="right-card trending-card">
+
+                <div class="right-card-header">
+
+                    <strong>What's happening</strong>
+
+                    <button>•••</button>
+
+                </div>
+
+
+                <div class="trend">
+
+                    <span class="trend-category">
+                        TECHNOLOGY · TRENDING
+                    </span>
+
+                    <strong>#AI</strong>
+
+                    <small>6 posts</small>
+
+                </div>
+
+
+                <div class="trend">
+
+                    <span class="trend-category">
+                        CREATIVE · TRENDING
+                    </span>
+
+                    <strong>#DesignInspiration</strong>
+
+                    <small>4 posts</small>
+
+                </div>
+
+
+                <div class="trend">
+
+                    <span class="trend-category">
+                        COMMUNITY · TRENDING
+                    </span>
+
+                    <strong>#LINKA</strong>
+
+                    <small>3 posts</small>
+
+                </div>
+
+
+                <button class="show-more">
+                    Show more
+                </button>
+
+            </div>
+
+
+
+            <!-- PEOPLE -->
+
+            <div class="right-card suggestions-card">
+
+                <div class="right-card-header">
+
+                    <strong>People you may know</strong>
+
+                    <button>See all</button>
+
+                </div>
+
+
+                <div class="suggestion">
+
+                    <div class="suggestion-avatar">
+                        <img src="Profile/john.jpg" alt="John">
+                    </div>
+
+                    <div class="suggestion-info">
+
+                        <strong>John Manlapat</strong>
+                        <span>3 mutual connections</span>
+
+                    </div>
+
+                    <button class="connect-btn">
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="suggestion">
+
+                    <div class="suggestion-avatar blue">
+                        <img src="Profile/jake.jpg" alt="Jake">
+                    </div>
+
+                    <div class="suggestion-info">
+
+                        <strong>Jake David</strong>
+                        <span>2 mutual connections</span>
+
+                    </div>
+
+                    <button class="connect-btn">
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="suggestion">
+
+                    <div class="suggestion-avatar purple">
+                        <img src="Profile/analiza.jpg" alt="Analiza">
+                    </div>
+
+                    <div class="suggestion-info">
+
+                        <strong>Analiza Doculan</strong>
+                        <span>1 mutual connection</span>
+
+                    </div>
+
+                    <button class="connect-btn">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="right-footer">
+
+                <span>Privacy</span>
+                <span>Terms</span>
+                <span>Help</span>
+                <span>About</span>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- =========================
+         MOBILE NAVIGATION
+    ========================== -->
+
+    <nav class="mobile-nav">
+
+        <a class="mobile-nav-item active">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M3 11.5L12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+            </svg>
+
+            <span>Home</span>
+
+        </a>
+
+
+        <a class="mobile-nav-item">
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="M20 20l-4-4"/>
+            </svg>
+
+            <span>Explore</span>
+
+        </a>
+
+
+        <a class="mobile-create">
+
+            <span>+</span>
+
+        </a>
+
+
+        <a class="mobile-nav-item" href="messages.html">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4.2-.9L3 21l1.8-4.4A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/>
+            </svg>
+
+            <span>Chat</span>
+
+        </a>
+
+
+        <a class="mobile-nav-item" href="profile.html">
+
+            <div class="mobile-avatar">
+                <img src="Profile/darcy.jpg" alt="Darcy">
+            </div>
+
+            <span>Profile</span>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         CREATE POST MODAL
+    ========================== -->
+
+    <div class="modal-overlay" id="postModal" aria-hidden="true">
+        <div class="post-modal" role="dialog" aria-modal="true" aria-labelledby="postModalTitle">
+
+            <div class="modal-header">
+                <strong id="postModalTitle">Create a post</strong>
+                <button type="button" id="closeModal" aria-label="Close">×</button>
+            </div>
+
+            <div class="modal-user">
+                <div class="avatar">
+                    <img src="Profile/darcy.jpg" alt="Darcy Og">
+                </div>
+                <div>
+                    <strong>Darcy Og</strong>
+                    <span>Public</span>
+                </div>
+            </div>
+
+            <textarea id="postText" placeholder="What's on your mind?" aria-label="Post text"></textarea>
+
+            <div class="modal-options">
+                <button type="button" aria-label="Add photo">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3.5" y="6.5" width="17" height="14" rx="2"></rect>
+                        <circle cx="12" cy="13.5" r="3"></circle>
+                        <path d="M8 6.5 9.4 4h5.2L16 6.5"></path>
+                    </svg>
+                    <span>Photo</span>
+                </button>
+                <button type="button"><span aria-hidden="true">😊</span><span>Feeling</span></button>
+                <button type="button"><span aria-hidden="true">📍</span><span>Location</span></button>
+            </div>
+
+            <button type="button" class="publish-btn" id="publishPost">Publish</button>
+        </div>
+    </div>
+
+    <script src="linka-data.js"></script>
+    <script src="home.js?v=3"></script>
+
+  <script src="ui.js?v=3"></script><script src="connect.js?v=1"></script>
+  <script src="polish.js?v=1"></script>
+</body>
+</html>
+
+
+
+

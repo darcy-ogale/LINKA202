@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>LINKA — Notifications</title><link rel="stylesheet" href="notifications.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">  <link rel="stylesheet" href="ui.css?v=3">
+</head>
+<body>
+<header class="topbar"><a href="home.html" class="brand"><img src="homelogo.png" class="brand-icon"><img src="homename.png" class="brand-wordmark"></a><div class="search-box"><svg viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4z"/></svg><input placeholder="Search"></div><div class="top-actions"><a class="icon-button active-icon" href="notifications.html"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></a><a class="icon-button" href="messages.html"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4.2-.9L3 21l1.8-4.4A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></a><a class="profile-button" href="profile.html"><div class="profile-avatar"><img src="Profile/darcy.jpg"></div><span class="profile-name">Darcy</span></a></div></header>
+<main class="page"><div class="page-head"><div class="title-line"><div><div class="eyebrow">Activity</div><h1>Notifications</h1></div><button id="markAll">Mark all as read</button></div></div>
+<section class="panel notification-panel"><div class="filter-bar"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="mentions">Mentions</button><button class="filter" data-filter="connections">Connections</button><button class="filter" data-filter="system">System</button></div>
+<div id="notificationList">
+<article class="notification unread" data-type="all mentions"><div class="notif-avatar pink"><img src="Profile/jessica.jpg"></div><div class="notif-copy"><strong>Jessica reacted to your post</strong><span>Jessica liked your post “Designing the future of LINKA.”</span><time>8 min ago</time></div><button class="more">•••</button></article>
+<article class="notification unread" data-type="all connections"><div class="notif-avatar"><img src="Profile/john.jpg"></div><div class="notif-copy"><strong>John Manlapat sent you a connection request</strong><span>You have a new connection request waiting for you.</span><time>24 min ago</time></div><button class="accept">Accept</button></article>
+<article class="notification unread" data-type="all mentions"><div class="notif-avatar purple"><img src="Profile/mark.jpg"></div><div class="notif-copy"><strong>Mark mentioned you</strong><span>“@darcyog check out this new LINKA concept.”</span><time>1 hr ago</time></div><button class="more">•••</button></article>
+<article class="notification" data-type="all system"><div class="notif-avatar system">✓</div><div class="notif-copy"><strong>Your profile is looking good</strong><span>Add a few more details to help people discover you on LINKA.</span><time>Yesterday</time></div><button class="more">•••</button></article>
+<article class="notification" data-type="all connections"><div class="notif-avatar blue"><img src="Profile/ryan.jpg"></div><div class="notif-copy"><strong>Ryan started following you</strong><span>Say hello and check out Ryan’s latest posts.</span><time>Yesterday</time></div><button class="more">•••</button></article>
+</div><div class="empty" id="empty">No notifications in this category.</div></section></main>
+<nav class="mobile-bottom">
+  <a class="mobile-nav-item" href="home.html">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5L12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+    <span>Home</span>
+  </a>
+  <a class="mobile-nav-item" href="explore.html">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    <span>Explore</span>
+  </a>
+  <a class="mobile-create" href="create.html" aria-label="Create">
+    <span>+</span>
+  </a>
+  <a class="mobile-nav-item" href="messages.html">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.8 9.8 0 0 1-4.2-.9L3 21l1.8-4.4A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+    <span>Chat</span>
+  </a>
+  <a class="mobile-nav-item" href="profile.html">
+    <div class="mobile-avatar"><img src="Profile/darcy.jpg" alt="Darcy"></div>
+    <span>Profile</span>
+  </a>
+</nav><script src="notifications.js"></script>  <script src="ui.js?v=3"></script><script src="connect.js?v=1"></script>
+</body></html>
